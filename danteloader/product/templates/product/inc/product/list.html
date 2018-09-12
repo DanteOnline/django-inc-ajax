@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<table>
+    <tr>
+        <th>Название</th>
+        <th>Редактировать</th>
+        <th>Удалить</th>
+    </tr>
+        {% for item in object_list %}
+            <tr>
+                <td>
+                    {{item}}
+                </td>
+            </tr>
+        {% endfor %}
+</table>
+
+
+<!--<script src="{% static 'js/mainapp/detail.js' %}"></script>-->
+<!--<script src="{% static 'js/mainapp/update_get.js' %}"></script>-->

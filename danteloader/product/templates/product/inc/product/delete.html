@@ -1,0 +1,6 @@
+Вы уверены?
+<form method="post" action="{% url 'product:category_delete' pk=object.id %}" class="delete-form">
+    {% csrf_token %}
+    <button type="submit">Да</button>
+    <!--<button type="button" id="btn-delete-confirm-no-{{object.id}}">Нет</button>-->
+</form>

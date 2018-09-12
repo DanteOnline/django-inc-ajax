@@ -1,0 +1,9 @@
+{% load staticfiles %}
+
+<form method="post" id="product_create_form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Сохранить</button>
+</form>
+
+<!--<script src="{% static 'js/mainapp/create.js' %}"></script>-->

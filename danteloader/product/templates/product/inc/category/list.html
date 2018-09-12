@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<table>
+    <tr>
+        <th>Название</th>
+        <th>Редактировать</th>
+        <th>Удалить</th>
+    </tr>
+        {% for item in object_list %}
+            <tr>
+                <td>
+                    <button class="btn-detail" data-id="{{item.id}}" type="button">{{item}}</button>
+                </td>
+                <td>
+                    <button class="btn-update" data-id="{{item.id}}" type="button">Редактировать</button>
+                </td>
+                <td>
+                    <div id="div-delete-{{item.id}}">
+                        <button class="btn-delete" data-id="{{item.id}}" type="button">Удалить</button>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+</table>
+
+
+<!--<script src="{% static 'js/mainapp/detail.js' %}"></script>-->
+<!--<script src="{% static 'js/mainapp/update_get.js' %}"></script>-->

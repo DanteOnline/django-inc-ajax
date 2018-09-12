@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block main %}
+    <h1>Категории</h1>
+
+    <input type="number" id='page' value="1">
+    <div id="product_list">
+    </div>
+    <div id="category_detail">
+    </div>
+    <div id="product_edit">
+    </div>
+
+    <h2>Продукты</h2>
+    <div id="true_product_list">
+    </div>
+
+    <div id="true_product_edit">
+    </div>
+
+{% endblock %}
+
+{% block js %}
+
+    <script src="{% static 'js/product/empty.js' %}"></script>
+    <!--<script src="{% static 'js/mainapp/detail.js' %}"></script>-->
+{% endblock %}
